@@ -1,0 +1,11 @@
+<iframe data-src-desk="https://supermario-game.com/mario-game/mobilemario.html" data-src-mob="https://supermario-game.com/mario-game/mobilemario.html" loading="lazy" id="game" width="951" height="550"></iframe>
+<script>
+    var iframe = document.getElementById('game'),
+        src = iframe.getAttribute('data-src-desk');
+    if (window.innerWidth < 991) {
+        src = iframe.getAttribute('data-src-mob');
+        iframe.setAttribute('class', 'mobilegame');
+    }
+    iframe.setAttribute('src', src);
+    iframe.contentWindow.focus();
+</script>
